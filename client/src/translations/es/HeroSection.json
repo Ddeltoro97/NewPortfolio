@@ -1,0 +1,10 @@
+{
+    "HeroSection": {
+      "salute": "Hola, yo soy ",
+      "me": "Soy un ",
+      "roles": "Desarrollador Full Stack",
+      "description": "Soy David, un desarrollador Full Stack siempre buscando nuevos desafíos y aprender cosas nuevas. Desde que era un niño siempre me ha apasionado la tecnología, siempre he querido saber mas y entender que hay detrás. Por eso es que siempre estoy motivado a aprender mas, entender mas y ser mejor. Creo que con una buena actitud y trabajo duro todo se puede lograr.",
+      "resume": "https://docs.google.com/document/d/1LLuVPQWbxqorHV0AGPQUEeRKShU2kdp2Fu_TL-ln3FI/edit?usp=sharing",
+      "button": "Ver CV"
+    }
+}
