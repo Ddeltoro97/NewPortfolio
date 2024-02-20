@@ -1,6 +1,4 @@
 import styled from 'styled-components';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GithubIcon from '@mui/icons-material/Github'
 import { Bio } from '../../data/constantsEN';
 
 const FooterContainer = styled.div`
