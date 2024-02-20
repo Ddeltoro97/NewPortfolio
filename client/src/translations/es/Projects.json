@@ -1,6 +1,18 @@
 {
     "Projects": {
         "title": "Proyectos",
-        "body": "These are the technologies I'm proficient in. I'm able to offer the best solutions with them."
+        "body": "Estos son mis mejores proyectos, espero que te gusten!",
+        "view": "Ver Código",
+        "live": "Ver App",
+        "members": "Miembros"
+    },
+
+    "Cero":{
+        "description": "Esta app fué creada por mi y unos compañeros de Henry. Es una aplicación de ventas que simplifica el trabajo para los negocios, ya que puedes mantener un registro de todas las ventas y del inventario de los productos. Hay dos tipos de usuario: empresa y vendedor. Las empresas pueden creear ventas, sucursales, ect mientras que las cuentas de vendedor pueden alterar el inventario y registrar ventas. Hay múltiples paquetes para esta app, siendo el mas básico el gratis"
+    },
+
+    
+    "Drivers":{
+        "description": "Esta aplicación web te permite encontrar cualquier conductor de F1. Puedes buscarlos por nombre o filtrarlos por equipo. También te permite crear tus propios conductores de F1, asi permitiendote eliminarlos o editarlos."
     }
 }

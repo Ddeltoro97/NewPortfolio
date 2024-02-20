@@ -1,6 +1,18 @@
 {
     "Projects": {
         "title": "Projects",
-        "body": "These are the technologies I'm proficient in. I'm able to offer the best solutions with them."
+        "body": "These are my most notable projects, I hope you like them!",
+        "view": "View Code",
+        "live": "View App",
+        "members": "Members"
+    },
+
+    "Cero":{
+        "description": "This app was created by me and some peers from Henry. This is a sales application that simplifies work for business since you can keep track of all sales and product inventory. There are two types of user: business and sales agent. Business users can create sales, locations, ect while sales accounts have the posibility of altering the inventory and registering sales. There are múltiple packages for this app, being the most basic one the free one."
+    },
+
+    "Drivers":{
+        "description": "This web App allows you to find any existing F1 driver. You can find them by name or by filtering them by team. It also allows you to create your own F1 drivers, while also allowing you to edit or delete them."
     }
+   
 }

@@ -1,0 +1,11 @@
+{
+    "Contact": {
+        "title": "Contacto",
+        "desc": "No dudes en contactarme, te aseguro que responderé tu email.",
+        "contact": "Escríbeme un Correo 🚀",
+        "name": "Tu Nombre",
+        "email": "Tu Email",
+        "button": "Envíar",
+        "success": "El Correo fué enviado"
+    }
+}

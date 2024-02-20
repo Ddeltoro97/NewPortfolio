@@ -1,0 +1,24 @@
+{
+    "Education": {
+        "title": "Education",
+        "body": "Fueled by a commitment to academic excellence, my education has armed me with the expertise and passion to drive innovation in the tech landscape.",
+        "card": "Achievment:"
+    },
+
+    "Henry":{
+        "description": "Completed +800 hours to certify myself as a Full Stack Developer."
+    },
+
+    "Makigas":{
+        "description": "Completed this course to learn Typescript and how it is different form Javascript."
+    },
+
+    "Bluuweb":{
+        "description1": "Completed this course to have in depth knowledge about Tailwind CSS.",
+        "description2": "Completed this course to have in depth knowledge about HTML and CSS."
+    },
+
+    "Udemy":{
+        "description": "Started this course to begin my journey in the tech world. Learned about JS and certified my knowledge."
+    }
+}

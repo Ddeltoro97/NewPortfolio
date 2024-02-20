@@ -267,6 +267,7 @@ export default function NavBar() {
           <NavLink href="#skills">{t("navBar.skills")}</NavLink>
           <NavLink href="#projects">{t("navBar.projects")}</NavLink>
           <NavLink href="#education">{t("navBar.education")}</NavLink>
+          <NavLink href="#contact">{t("navBar.contact")}</NavLink>
         </NavItems>
         <ButtonContainer>
           <GithubButton href={Bio.github} target="_blank">
@@ -307,6 +308,14 @@ export default function NavBar() {
             }}
           >
             {t("navBar.education")}
+          </MobileLink>
+          <MobileLink
+            href="#contact"
+            onClick={() => {
+              setOpen(!open);
+            }}
+          >
+            {t("navBar.contact")}
           </MobileLink>
           <GithubButton
             href={Bio.github} 

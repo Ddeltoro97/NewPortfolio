@@ -1,0 +1,11 @@
+{
+    "Contact": {
+        "title": "Contact",
+        "desc": "Feel free to contact me, I'll make sure to reply to your email.",
+        "contact": "Email Me 🚀",
+        "name": "Your Name",
+        "email": "Your Email",
+        "button": "Send",
+       "success": "Email was sent"
+    }
+}

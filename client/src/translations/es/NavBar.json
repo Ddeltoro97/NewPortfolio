@@ -2,10 +2,11 @@
     "navBar": {
         "my": "Mi",
         "portfolio": "portafolio",
-        "about": "Acerca de",
+        "about": "Yo",
         "skills": "Habilidades",
         "projects": "Proyectos",
         "education": "Educación",
+        "contact": "Contacto",
         "language": "Español",
         "flag": "https://cdn.sofifa.net/flags/es.png"
     }

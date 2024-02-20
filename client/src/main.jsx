@@ -17,6 +17,12 @@ import Skills_es from "./translations/es/Skills.json"
 import Projects_en from "./translations/en/Projects.json";
 import Projects_es from "./translations/es/Projects.json";
 
+import Education_en from "./translations/en/Education.json";
+import Education_es from "./translations/es/Education.json";
+
+import Contact_en from "./translations/en/Contact.json";
+import Contact_es from "./translations/es/Contact.json";
+
 i18next.init({
   interpolation: {escapeValue: true},
   lng: "en",
@@ -25,14 +31,18 @@ i18next.init({
       NavBar: NavBar_en,
       HeroSection: HeroSection_en,
       Skills: Skills_en,
-      Projects: Projects_en
+      Projects: Projects_en,
+      Education: Education_en,
+      Contact: Contact_en
       
     },
     es:{
       NavBar: NavBar_es,
       HeroSection: HeroSection_es,
       Skills: Skills_es,
-      Projects: Projects_es
+      Projects: Projects_es,
+      Education: Education_es,
+      Contact: Contact_es
 
     }
   }
