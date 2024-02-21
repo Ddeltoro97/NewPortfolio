@@ -152,6 +152,15 @@ export default function Contact(){
         message: "",
     });
 
+    const clear = () =>{
+        toggle();
+        setValidate({
+            name: "",
+            email: "",
+            message: ""
+        })
+    }
+
     const changeName = (event) =>{
         setValidate({
             ...validate,
@@ -182,7 +191,7 @@ export default function Contact(){
                     <ContactInput placeholder={t("Contact.name")} type="text" name="user_name" value={validate.name} onChange={changeName}></ContactInput>
                     <ContactInput placeholder={t("Contact.email")} type="text" name="user_email" value={validate.email} onChange={changeMail}></ContactInput>
                     <ContactInputMessage rows="5"  name="message" value={validate.message} onChange={changeMessage}/>
-                    <ContactButton onClick={toggle}  type="submit" disabled={!validate.name || !validate.email || !validate.message || validate.name.startsWith(' ') || validate.message.startsWith(' ') || validate.email.startsWith(' ') ||  validate.email.trim() === '' || !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(validate.email)}>{t("Contact.button")}</ContactButton>
+                    <ContactButton onClick={clear}  type="submit" disabled={!validate.name || !validate.email || !validate.message || validate.name.startsWith(' ') || validate.message.startsWith(' ') || validate.email.startsWith(' ') ||  validate.email.trim() === '' || !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(validate.email)}>{t("Contact.button")}</ContactButton>
                 </ContactForm>
 
                 <Snackbar
