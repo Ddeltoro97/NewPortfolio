@@ -9,7 +9,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   position: relative;
-  z-index: 1;
+  z-index: 2;
   align-items: center;
   @media (max-width: 960px) {
     padding: 0px;
@@ -190,7 +190,8 @@ export default function Contact(){
                 autoHideDuration={6000}
                 onClose={() => setModal(false)}
                 message={t("Contact.success")}
-                severity="success"/>
+                severity="success"
+                style={{zIndex: '2'}}/>
             </Wrapper>
         </Container>
     )
