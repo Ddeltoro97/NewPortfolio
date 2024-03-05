@@ -203,14 +203,18 @@ export default function ProjectDetails({ openModal, setOpenModal }){
                     />
                     <Image src={project?.image} />
                     <Title>{project?.title}</Title>
-                    <Date>{project.date}</Date>
+                    {/* <Date>{project.date}</Date> */}
                     <Tags>
                         {project?.tags.map((tag) => (
                             <Tag>{tag}</Tag>
                         ))}
                     </Tags>
                     <Desc>{project?.description}</Desc>
-                    {project.member && (
+                    <Title>{t("Projects.tasks")}</Title>
+                    <li>{project?.task1}</li>
+                    <li>{project?.task2}</li>
+                    <li>{project?.task3}</li>
+                    {/* {project.member && (
                         <>
                             <Label>{t("Projects.members")}</Label>
                             <Members>
@@ -228,7 +232,7 @@ export default function ProjectDetails({ openModal, setOpenModal }){
                                 ))}
                             </Members>
                         </>
-                    )}
+                    )} */}
                     <ButtonGroup>
                         <Button dull href={project?.github} target='new'>{t("Projects.view")}</Button>
                         <Button href={project?.webapp} target='new'>{t("Projects.live")}</Button>

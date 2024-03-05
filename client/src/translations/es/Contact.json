@@ -6,6 +6,6 @@
         "name": "Tu Nombre",
         "email": "Tu Email",
         "button": "Envíar",
-        "success": "El Correo fué enviado"
+        "success": "El Correo fue enviado"
     }
 }

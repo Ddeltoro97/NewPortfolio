@@ -115,12 +115,19 @@ export default function Projects({openModal,setOpenModal}){
 
     projects[0] ={
         ...projects[0],
-        description: t("Cero.description")
+        description: t("Cero.description"),
+        task1: t("Cero.task1"),
+        task2: t("Cero.task2"),
+        task3: t("Cero.task3")
+        
     }
 
     projects[1] ={
         ...projects[1],
-        description: (t("Drivers.description"))
+        description: (t("Drivers.description")),
+        task1: t("Drivers.task1"),
+        task2: t("Drivers.task2"),
+        task3: t("Drivers.task3")
     }
 
     return(

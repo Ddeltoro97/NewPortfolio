@@ -133,14 +133,14 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Tags>
             <Details>
                 <Title>{project.title}</Title>
-                <Date>{project.date}</Date>
+                {/* <Date>{project.date}</Date> */}
                 <Description>{project.description}</Description>
             </Details>
-            <Members>
+            {/* <Members>
                 {project.member?.map((member) => (
                     <Avatar src={member.img}/>
                 ))}
-            </Members>
+            </Members> */}
             {/* <Button>View Project</Button> */}
         </Card>
     )
