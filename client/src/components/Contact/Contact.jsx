@@ -106,10 +106,19 @@ const ContactButton = styled.button`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
-  background: ${({ disabled }) => (disabled ? 'linear-gradient(90deg, rgba(78,80,78,1) 36%, rgba(86,89,86,1) 72%, rgba(70,71,70,1) 92%)' : 'linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%)')};
-    background: ${({ disabled }) => (disabled ? 'linear-gradient(90deg, rgba(78,80,78,1) 36%, rgba(86,89,86,1) 72%, rgba(70,71,70,1) 92%)' : '-moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%)')};
-    background: ${({ disabled }) => (disabled ? 'linear-gradient(90deg, rgba(78,80,78,1) 36%, rgba(86,89,86,1) 72%, rgba(70,71,70,1) 92%)' : '-webkitlinear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%)')};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+  background: ${({ disabled }) =>
+    disabled
+      ? "linear-gradient(90deg, rgba(78,80,78,1) 36%, rgba(86,89,86,1) 72%, rgba(70,71,70,1) 92%)"
+      : "linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%)"};
+  background: ${({ disabled }) =>
+    disabled
+      ? "linear-gradient(90deg, rgba(78,80,78,1) 36%, rgba(86,89,86,1) 72%, rgba(70,71,70,1) 92%)"
+      : "-moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%)"};
+  background: ${({ disabled }) =>
+    disabled
+      ? "linear-gradient(90deg, rgba(78,80,78,1) 36%, rgba(86,89,86,1) 72%, rgba(70,71,70,1) 92%)"
+      : "-webkitlinear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%)"};
 
   padding: 13px 16px;
   margin-top: 2px;
@@ -120,89 +129,96 @@ const ContactButton = styled.button`
   font-weight: 600;
 `;
 
+const SuccessModal = styled.div`
+  position: fixed;
+  background: #191924;
+  height: 150px;
+  width: 340px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 15px 35px;
 
-export default function Contact(){
 
-    const [t, i18n] = useTranslation("Contact");
+`
 
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
-    const form = useRef();
+  const [modal, setModal] = useState(false);
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_rq1ib4o', 'template_4b7l4cn', form.current, 'fZpQc9RAoWb4GA1p9')
-          .then((result) => {
-              // console.log(result.text);
-          }, (error) => {
-              // console.log(error.text);
-          });
-      };
+  const [t, i18n] = useTranslation("Contact");
 
-      const [modal, setModal] = useState(false);
+  const handleSubmit = (e) =>{
+    e.preventDefault();
 
-      const toggle = () =>{
-        setModal(!modal);
-    }
+    const serviceId = 'service_rq1ib4o';
+    const templateId = 'template_4b7l4cn';
+    const publicKey = 'fZpQc9RAoWb4GA1p9';
 
-    
-    const [validate, setValidate] = useState({
-        name: "",
-        email: "",
-        message: "",
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      to_name: 'David',
+      message: message
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+    .then((response) => {
+      // console.log('Email sent', response);
+      setName('');
+      setEmail('');
+      setMessage('');
+      setModal(true);
+    })
+    .catch((error) => {
+      // console.error('Error sending email: ', error);
     });
+  };
 
-    const clear = () =>{
-        toggle();
-        setValidate({
-            name: "",
-            email: "",
-            message: ""
-        })
-    }
+  const closeModal = () =>{
+    setModal(false);
+  }
 
-    const changeName = (event) =>{
-        setValidate({
-            ...validate,
-            name: event.target.value
-        })
-    }
-    const changeMail = (event) =>{
-        setValidate({
-            ...validate,
-            email: event.target.value
-        })
-    }
-    
-    const changeMessage = (event) =>{
-        setValidate({
-            ...validate,
-            message: event.target.value
-        })
-    }
 
-    return(
-        <Container id="contact">
-            <Wrapper>
-                <Title>{t("Contact.title")}</Title>
-                <Desc>{t("Contact.desc")}</Desc>
-                <ContactForm ref={form} onSubmit={sendEmail}>
-                    <ContactTitle>{t("Contact.contact")}</ContactTitle>
-                    <ContactInput placeholder={t("Contact.name")} type="text" name="user_name" value={validate.name} onChange={changeName}></ContactInput>
-                    <ContactInput placeholder={t("Contact.email")} type="text" name="user_email" value={validate.email} onChange={changeMail}></ContactInput>
-                    <ContactInputMessage rows="5"  name="message" value={validate.message} onChange={changeMessage}/>
-                    <ContactButton onClick={clear}  type="submit" disabled={!validate.name || !validate.email || !validate.message || validate.name.startsWith(' ') || validate.message.startsWith(' ') || validate.email.startsWith(' ') ||  validate.email.trim() === '' || !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(validate.email)}>{t("Contact.button")}</ContactButton>
-                </ContactForm>
-
-                <Snackbar
-                open={modal}
-                autoHideDuration={6000}
-                onClose={() => setModal(false)}
-                message={t("Contact.success")}
-                severity="success"
-                style={{zIndex: '2'}}/>
-            </Wrapper>
-        </Container>
-    )
-
+  return (
+    <Container id="contact">
+      <Wrapper>
+        <Title>{t("Contact.title")}</Title>
+        <Desc>{t("Contact.desc")}</Desc>
+        <ContactForm onSubmit={handleSubmit}>
+          <ContactInput
+            type="text"
+            placeholder={t("Contact.name")}
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <ContactInput
+            type="text"
+            placeholder={t("Contact.email")}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <ContactInputMessage
+            // cols="30"
+            rows="7"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          />
+          <ContactButton disabled={!name || !email || !message || name.startsWith(' ') || message.startsWith(' ') || email.startsWith(' ') ||  email.trim() === '' || !/^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/.test(email)} type="submit">{t("Contact.button")}</ContactButton>
+        </ContactForm>
+        {modal && 
+          <SuccessModal>
+           <ContactTitle>{t("Contact.success")}</ContactTitle>
+           <ContactButton onClick={closeModal}>OK</ContactButton>
+          </SuccessModal>
+        }
+      </Wrapper>
+    </Container>
+  );
 }

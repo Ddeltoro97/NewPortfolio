@@ -115,7 +115,6 @@ const SkillImage = styled.img`
 
 export default function Skills() {
   const [t, i18n] = useTranslation("Skills");
-  console.log(skills)
 
   skills[2] = {
     ...skills[2],
