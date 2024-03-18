@@ -9,7 +9,7 @@
     },
 
     "Cero":{
-        "description": "Esta app fué creada por mi y unos compañeros de Henry. Es una aplicación de ventas que simplifica el trabajo para los negocios, ya que puedes mantener un registro de todas las ventas y del inventario de los productos.",
+        "description": "Es una aplicación de ventas que simplifica el trabajo para los negocios, ya que puedes mantener un registro de todas las ventas y del inventario de los productos por sucursal.",
         "task1": "Crear estilos para componentes, inicialmente en Figma y luego en CSS y Tailwind CSS.",
         "task2": "Agregar funcionalidad a componentes existentes, incluyendo responsividad, la creación y renderización de modals.",
         "task3": "Crear componentes mas intuitivos como por ejemplo gráficos y tarjetas para productos de inventario."

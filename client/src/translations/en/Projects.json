@@ -9,7 +9,7 @@
     },
 
     "Cero":{
-        "description": "This app was created by me and some peers from Henry. This is a sales application that simplifies work for business since you can keep track of all sales and product inventory.",
+        "description": "This is a sales application that simplifies work for business since you can keep track of all sales and product inventory.",
         "task1": "Create styles for components, first in Figma and then in CSS and Tailwind CSS.",
         "task2": "Add functionality to existing components, including responsiveness, the creation and rendering of modals.",
         "task3": "Created more intuitive components such as graphs and inventory product cards."
