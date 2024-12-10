@@ -211,6 +211,7 @@ const Image = styled.img`
 
 export default function HeroSection() {
   const [t, i18n] = useTranslation("HeroSection");
+  const roles = t("HeroSection.roles", {returnObjects: true});
 
 
   return (
@@ -227,7 +228,7 @@ export default function HeroSection() {
                         <Span>
                             <Typewritter
                                 options={{
-                                    strings: t("HeroSection.roles") ,
+                                    strings: roles,
                                     autoStart: true,
                                     loop: true,
                                 }}

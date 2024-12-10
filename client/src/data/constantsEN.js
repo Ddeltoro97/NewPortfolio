@@ -138,6 +138,14 @@ export const education = [
     desc: "Started this course to begin my journey in the tech world. Learned about JS and certified my knowledge",
     degree: "The Complete Javascript Course: From Zero to Expert",
   },
+  {
+    id: 5,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRRLjC1u27lArZMwKQ-tokBRcMa8wI1zJFKQ&s",
+    school: "Universidad Autónoma del Caribe",
+    date: "Currently studying",
+    desc: "I decided to believe in my passion for technology and become a computer scientist. I'm currently still studying.",
+    degree: "Computer Science Bachelor's Degree"
+  }
 ];
 
 export const projects = [
@@ -211,4 +219,13 @@ export const projects = [
     github: "https://github.com/Ddeltoro97/PI-Drivers",
     webapp: "https://pi-drivers-phi.vercel.app/",
   },
+  {
+    id: 2,
+    title: "Expense Tracker",
+    date: "11/2024",
+    description: "This is a web app which allows you to track your expenses. I decided to create this app since I tend to spend money and then forget what I spend it on.",
+    image:"https://i.postimg.cc/vTjzkv7B/Expense.png",
+    tags: ["React Js", "Javascript", "CSS"],
+    webapp: "https://expense-tracker-edfp.vercel.app/"
+  }
 ];

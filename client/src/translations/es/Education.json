@@ -20,5 +20,9 @@
 
     "Udemy":{
         "description": "Con este curso inicié mi viaje en em mundo tech. Aprendí de JS y certifiqué mi conocimiento."
+    },
+    "Uac":{
+        "dates": "Actualmente Estudiando",
+        "description": "Decidí creer en mi pasión por la tecnología y volverme un profesional en Ingeniería de Sistemas. Aún me encuentro cursando este pregrado."
     }
 }

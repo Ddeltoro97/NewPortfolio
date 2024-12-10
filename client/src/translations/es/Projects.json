@@ -21,5 +21,12 @@
         "task1": "Crear y conectar Frontend (incluyendo diseño), Backend y base de datos para renderizar la información y permitirle al usuario hacer peticiones a la API o a la base de datos.",
         "task2": "Diseño de filtrado y ordenamientos para facilitarle al usuario la búsqueda de su conductor.",
         "task3": "Creación de un diseño responsive lo que le permite al usuario usar esta aplicación web en cualquier dispositivo sin problemas."
+    },
+
+    "Expense":{
+        "description": "Esta es una aplicación web que te permite tener un registro de tus gastos. Decidí crear esta app ya que muchas veces gasto dinero y olvido en que lo gasté",
+        "task1": "Hice un diseño responsive e intuitivo para facilitarle el uso de la app al usuario",
+        "task2": "Hice que los gastos y ahorros hagan un cálculo matemático adecuado para así mostrar el valor del monto al usuario.",
+        "task3": "Permite que el usuario seleccione su idioma (Ingles y Español."
     }
 }

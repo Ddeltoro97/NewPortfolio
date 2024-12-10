@@ -130,6 +130,14 @@ export default function Projects({openModal,setOpenModal}){
         task3: t("Drivers.task3")
     }
 
+    projects[2]={
+        ...projects[2],
+        description: (t("Expense.description")),
+        task1: t("Expense.task1"),
+        task2: t("Expense.task2"),
+        task3: t("Expense.task3")
+    }
+
     return(
         <Container id='projects'>
             <Wrapper>

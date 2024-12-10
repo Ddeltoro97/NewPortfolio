@@ -104,8 +104,13 @@ export default function Education (){
      education[4] = {
         ...education[4],
         desc: t("Udemy.description")
+        
     }
-
+    education[5] = {
+        ...education[5],
+        date: t("Uac.dates"),
+        desc: t("Uac.description")
+    }
 
  
 

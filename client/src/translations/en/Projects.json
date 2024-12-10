@@ -20,6 +20,15 @@
         "task1": "Created and connected Frontend (including styles), Backend and Database in order to render the information and allow the user to make petitions to the Database or API.",
         "task2": "Designed filtering and ordering methods to allow the user to find their desired driver with ease.",
         "task3": "Created a responsive design to allow the user to use this web app in all devices without any issue."
+    },
+
+    "Expense":{
+        "description": "This is a web app which allows you to track your expenses. I decided to create this app since I tend to spend money and then forget what I spend it on.",
+        "task1": "Created a responsive and intuitive design which helps highlight the expenses and the income.",
+        "task2": "I made it so that the expenses and earnings actually substract each other so the used can see how much income they really have.",
+        "task3": "Allow the user to toggle between languages (English and Spanish)"
     }
+
+    
    
 }

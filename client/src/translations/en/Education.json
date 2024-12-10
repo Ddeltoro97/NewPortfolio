@@ -20,5 +20,9 @@
 
     "Udemy":{
         "description": "Started this course to begin my journey in the tech world. Learned about JS and certified my knowledge."
+    },
+    "Uac":{
+        "dates": "Currently Studying",
+        "description": "I decided to believe in my passion for technology and become a computer scientist. I'm currently still studying."
     }
 }
